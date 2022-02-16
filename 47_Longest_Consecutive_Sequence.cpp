@@ -18,21 +18,21 @@
 #include <vector>
 #include <chrono>
 #include <limits.h>
-#include<algorithm>
+#include <algorithm>
 using namespace std;
+
+// O(nlogn) time method
 
 class Solution
 {
 public:
     int longestConsecutive(vector<int> &nums)
     {
-
         int size = nums.size();
         if (size == 0)
             return 0;
 
-        int count = 1;
-        int max = INT_MIN;
+        int count = 1, max = INT_MIN;
         sort(nums.begin(), nums.end());
         for (int i = 0; i < size; i++)
         {
@@ -47,7 +47,6 @@ public:
             if (max < count)
                 max = count;
         }
-
         return max;
     }
 };
@@ -67,3 +66,4 @@ int main()
          << "Time measured: " << elapsed.count() * 1e-9;
     return 0;
 }
+
