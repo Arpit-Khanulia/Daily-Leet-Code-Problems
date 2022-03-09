@@ -54,6 +54,7 @@ int main()
     return 0;
 }
 
+
 // naive approach O(n2)
 
 // int maxArea(int* height, int heightSize){
